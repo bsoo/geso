@@ -39,3 +39,7 @@ func (c *Client) decodeBody(resp *esapi.Response) ([]byte, error) {
 	}
 	return body, nil
 }
+
+func boolPtr(b bool) *bool {
+	return &b
+}

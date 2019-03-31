@@ -38,7 +38,9 @@ func runCatIndicesCmd(cmd *cobra.Command, args []string) error {
 }
 
 func (c *Client) CatIndices(ctx context.Context) ([]byte, error) {
-	req := esapi.CatIndicesRequest{}
+	req := esapi.CatIndicesRequest{
+		V: boolPtr(true),
+	}
 	resp, err := req.Do(ctx, c.Client)
 	if err != nil {
 		return nil, err

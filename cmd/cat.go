@@ -14,6 +14,7 @@ func newCatCmd() *cobra.Command {
 
 	cmd.AddCommand(
 		newCatIndicesCmd(),
+		newCatAliasesCmd(),
 	)
 	return cmd
 }
