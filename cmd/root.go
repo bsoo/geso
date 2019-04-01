@@ -25,7 +25,6 @@ func prepareSubCommands() {
 	rootCmd.AddCommand(
 		newVersionCmd(),
 		newCatCmd(),
-		newSearchCmd(),
 	)
 }
 
